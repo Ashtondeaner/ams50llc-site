@@ -1,0 +1,11 @@
+{
+  "name": "AMS50 LLC Site",
+  "install": "npm ci",
+  "terminals": [
+    {
+      "name": "dev",
+      "command": "npm run dev -- --host"
+    }
+  ],
+  "ports": [5173]
+}
