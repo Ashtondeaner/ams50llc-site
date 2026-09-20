@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+
+  --color-bg: #f7f5f0;
+  --color-bg-elevated: #ffffff;
+  --color-bg-subtle: #efece4;
+  --color-bg-ink: #0c1f1a;
+  --color-fg: #14241e;
+  --color-fg-muted: #4a5a54;
+  --color-fg-subtle: #7a8782;
+  --color-fg-on-ink: #f4f1ea;
+  --color-fg-on-ink-muted: #b8c4be;
+  --color-primary: #1a6b52;
+  --color-primary-hover: #145643;
+  --color-primary-fg: #ffffff;
+  --color-accent: #c4a35a;
+  --color-border: #e2ddd2;
+  --color-border-strong: #c9c2b4;
+  --color-ring: #1a6b52;
+
+  --shadow-soft: 0 4px 24px rgba(12, 31, 26, 0.06);
+  --shadow-lift: 0 12px 40px rgba(12, 31, 26, 0.12);
+  --radius: 0.75rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-bg text-fg font-sans antialiased;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@utility container-page {
+  @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+}
+
+@utility focus-ring {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-bg;
+}
+
+@utility font-display {
+  font-family: var(--font-display);
+}
