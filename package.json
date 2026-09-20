@@ -6,7 +6,7 @@
   "description": "Arnold Management Services, LLC — AMS50LLC.com vacation rentals (Naples FL & Treasure Cay, Bahamas)",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit"
   },
